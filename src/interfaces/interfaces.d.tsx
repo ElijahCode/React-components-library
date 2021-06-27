@@ -9,3 +9,9 @@ interface TextParagraphComponentProps {
   style?: string | undefined;
   text?: string | undefined;
 }
+
+interface CollapseListComponentProps {
+  [key: string]: any;
+  headerText?: string | undefined;
+  list?: string[];
+}
