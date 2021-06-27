@@ -15,3 +15,9 @@ interface CollapseListComponentProps {
   headerText?: string | undefined;
   list?: string[];
 }
+
+interface ImageComponentProps {
+  [key: string]: any;
+  source?: string;
+  align?: "none" | "left" | "right";
+}

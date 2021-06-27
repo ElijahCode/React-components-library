@@ -23,5 +23,6 @@ module.exports = {
     "@typescript-eslint/no-namespace": "off",
     "no-restricted-globals": "off",
     "no-use-before-define": "off",
+    "import/no-extraneous-dependencies": "off",
   },
 };
