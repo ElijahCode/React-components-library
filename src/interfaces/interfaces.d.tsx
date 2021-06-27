@@ -21,3 +21,8 @@ interface ImageComponentProps {
   source?: string;
   align?: "none" | "left" | "right";
 }
+
+interface ColumnsComponentProps {
+  [key: string]: any;
+  value: number;
+}
