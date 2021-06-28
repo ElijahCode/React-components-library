@@ -1,15 +1,12 @@
 import * as React from "react";
 
-export class Header extends React.Component {
-  level: number;
+export class Header extends React.Component<
+  Record<string, unknown>,
+  HComponentProps
+> {
+  level: number = this.props.level ? (this.props.level as number) : 1;
 
-  text: string;
-
-  constructor(props: HComponentProps) {
-    super(props);
-    this.level = props.level ? props.level : 1;
-    this.text = props.text ? props.text : "Text";
-  }
+  text: string = this.props.text ? (this.props.text as string) : "Text";
 
   render() {
     switch (this.level) {

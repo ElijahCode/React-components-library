@@ -18,7 +18,12 @@ export class ColumnsComponent extends React.Component<
 
   render() {
     return (
-      <div data-testid="columnsBlock">{this.setCulumns().map((el) => el)}</div>
+      <div
+        style={{ display: "flex", justifyContent: "space-between" }}
+        data-testid="columnsBlock"
+      >
+        {this.setCulumns()}
+      </div>
     );
   }
 }

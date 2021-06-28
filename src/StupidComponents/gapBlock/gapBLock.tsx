@@ -1,6 +1,9 @@
 import * as React from "react";
 
-export class GapBlock extends React.Component {
+export class GapBlock extends React.Component<
+  Record<string, unknown>,
+  Record<string, unknown>
+> {
   // eslint-disable-next-line class-methods-use-this
   render(): React.ReactElement {
     return (

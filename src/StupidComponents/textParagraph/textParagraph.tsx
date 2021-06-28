@@ -1,15 +1,12 @@
 import * as React from "react";
 
-export class TextParagraph extends React.Component {
-  text: string;
+export class TextParagraph extends React.Component<
+  Record<string, unknown>,
+  TextParagraphComponentProps
+> {
+  text: string = this.props.text ? (this.props.text as string) : "Text";
 
-  style: string;
-
-  constructor(props: TextParagraphComponentProps) {
-    super(props);
-    this.text = props.text ? props.text : "Text";
-    this.style = props.style ? props.style : "normal";
-  }
+  style: string = this.props.style ? (this.props.style as string) : "normal";
 
   render() {
     switch (this.style) {

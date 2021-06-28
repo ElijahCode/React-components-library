@@ -10,7 +10,7 @@ describe("Testing CollapsingList", () => {
   });
   describe("Testing basic markup", () => {
     beforeEach(() => {
-      const collapseList = new CollapsingList({});
+      const collapseList = new CollapsingList(undefined);
       render(collapseList.render());
     });
     it("Have basic markup", () => {

@@ -16,6 +16,10 @@ describe("Testing ColumsComponent", () => {
 
     it("Have ColumnsBlock", () => {
       expect(screen.getByTestId("columnsBlock")).toBeInTheDocument();
+      expect(screen.getByTestId("columnsBlock").style.display).toBe("flex");
+      expect(screen.getByTestId("columnsBlock").style.justifyContent).toBe(
+        "space-between"
+      );
     });
   });
 

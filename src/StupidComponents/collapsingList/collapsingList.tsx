@@ -1,19 +1,16 @@
 import * as React from "react";
 
-export class CollapsingList extends React.Component {
-  headText: string;
+export class CollapsingList extends React.Component<
+  CollapseListComponentProps | undefined,
+  CollapseListComponentState
+> {
+  headText: string = this.props ? (this.props.headerText as string) : "List";
 
-  list: string[];
+  list: string[] = this.props ? (this.props.list as string[]) : [];
 
   state = {
     buttonState: false,
   };
-
-  constructor(props: CollapseListComponentProps) {
-    super(props);
-    this.headText = props.headerText ? props.headerText : "List";
-    this.list = props.list ? props.list : [];
-  }
 
   click = () => {
     this.setState({

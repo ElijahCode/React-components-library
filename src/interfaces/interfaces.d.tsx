@@ -10,6 +10,11 @@ interface TextParagraphComponentProps {
   text?: string | undefined;
 }
 
+interface CollapseListComponentState {
+  buttonState: boolean;
+  list?: string[];
+}
+
 interface CollapseListComponentProps {
   [key: string]: any;
   headerText?: string | undefined;
