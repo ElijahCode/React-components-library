@@ -5,8 +5,8 @@
   "private": true,
   "scripts": {
     "test": "jest --runInBand --detectOpenHandles --forceExit",
-    "lint": "prettier --check . && eslint . --ext .js,.ts && tsc --jsx react --noEmit src/**/*.tsx",
-    "lint:fix": "prettier --write . && eslint . --ext .js,.ts --fix"
+    "lint": "prettier --check . && eslint . --ext .js,.ts,.tsx && tsc --jsx react --noEmit src/**/*.tsx",
+    "lint:fix": "prettier --write . && eslint . --ext .js,.ts,.tsx --fix"
   },
   "author": "Ilya Starikov",
   "license": "ISC",
