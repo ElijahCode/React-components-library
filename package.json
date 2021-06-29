@@ -4,7 +4,7 @@
   "description": "",
   "private": true,
   "scripts": {
-    "test": "jest --runInBand --detectOpenHandles --forceExit",
+    "test": "jest",
     "lint": "prettier --check . && eslint . --ext .js,.ts,.tsx && tsc --jsx react --noEmit src/**/*.tsx",
     "lint:fix": "prettier --write . && eslint . --ext .js,.ts,.tsx --fix",
     "storybook": "start-storybook -p 6006",
