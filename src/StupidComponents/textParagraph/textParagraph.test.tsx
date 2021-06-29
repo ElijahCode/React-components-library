@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import "react";
+import React from "react";
 import { TextParagraph } from "./textParagraph";
 
 describe("Test TextParagraph component", () => {
@@ -9,8 +9,7 @@ describe("Test TextParagraph component", () => {
   });
   describe("Testing basic markup", () => {
     beforeEach(() => {
-      const p = new TextParagraph({});
-      render(p.render());
+      render(<TextParagraph {...{}} />);
     });
     it("Have p with text: Text", () => {
       expect(screen.getByText("Text")).toBeInTheDocument();
@@ -20,11 +19,14 @@ describe("Test TextParagraph component", () => {
     const styles = ["normal", "bold", "cursive"];
     let index = 0;
     beforeEach(() => {
-      const p = new TextParagraph({
-        style: styles[index],
-        text: "Some text",
-      });
-      render(p.render());
+      render(
+        <TextParagraph
+          {...{
+            style: styles[index],
+            text: "Some text",
+          }}
+        />
+      );
       index += 1;
     });
     it("Have p with font-style: normal", () => {

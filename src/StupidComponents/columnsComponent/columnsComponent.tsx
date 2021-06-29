@@ -1,11 +1,11 @@
 import * as React from "react";
 
 export class ColumnsComponent extends React.Component<
-  { [key: string]: any; value: number } | undefined,
+  { [key: string]: any; value?: number } | undefined,
   { value: number } | undefined
 > {
   state = {
-    value: this.props ? this.props.value : 0,
+    value: this.props.value ? this.props.value : 0,
   };
 
   setCulumns() {
@@ -17,12 +17,13 @@ export class ColumnsComponent extends React.Component<
   }
 
   render() {
+    const columns = this.setCulumns();
     return (
       <div
         style={{ display: "flex", justifyContent: "space-between" }}
         data-testid="columnsBlock"
       >
-        {this.setCulumns()}
+        {columns}
       </div>
     );
   }

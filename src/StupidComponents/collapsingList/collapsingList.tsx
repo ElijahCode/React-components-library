@@ -1,12 +1,14 @@
 import * as React from "react";
 
 export class CollapsingList extends React.Component<
-  CollapseListComponentProps | undefined,
+  CollapseListComponentProps,
   CollapseListComponentState
 > {
-  headText: string = this.props ? (this.props.headerText as string) : "List";
+  headText: string = this.props.headerText
+    ? (this.props.headerText as string)
+    : "List";
 
-  list: string[] = this.props ? (this.props.list as string[]) : [];
+  list: string[] = this.props.list ? (this.props.list as string[]) : [];
 
   state = {
     buttonState: false,

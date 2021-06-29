@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render, screen } from "@testing-library/react";
-import "react";
+import React from "react";
 import { GapBlock } from "./gapBLock";
 
 describe("Testing GapBlock component", () => {
@@ -9,8 +9,7 @@ describe("Testing GapBlock component", () => {
   });
   describe("Testing markup", () => {
     beforeEach(() => {
-      const gapBlock = new GapBlock({});
-      render(gapBlock.render());
+      render(<GapBlock {...{}} />);
     });
 
     it("Have gap div", () => {

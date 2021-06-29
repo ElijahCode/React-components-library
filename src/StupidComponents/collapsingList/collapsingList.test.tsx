@@ -10,8 +10,7 @@ describe("Testing CollapsingList", () => {
   });
   describe("Testing basic markup", () => {
     beforeEach(() => {
-      const collapseList = new CollapsingList(undefined);
-      render(collapseList.render());
+      render(<CollapsingList {...{}} />);
     });
     it("Have basic markup", () => {
       expect(screen.getByText("List")).toBeInTheDocument();
@@ -20,14 +19,11 @@ describe("Testing CollapsingList", () => {
   });
 
   describe("Testing functionality", () => {
-    let collapseList: CollapsingList;
     const inputProps: CollapseListComponentProps = {
       headerText: "Test",
       list: ["item1", "item2", "item3"],
     };
     beforeEach(() => {
-      collapseList = new CollapsingList(inputProps);
-      // render(collapseList.render());
       render(<CollapsingList {...inputProps} />);
     });
     it("Render list when user click on button", () => {

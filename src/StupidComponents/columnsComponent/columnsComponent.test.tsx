@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom";
 import "react";
+import "@testing-library/jest-dom";
 import { ColumnsComponent } from "./columnsComponent";
 
 describe("Testing ColumsComponent", () => {
@@ -10,8 +10,7 @@ describe("Testing ColumsComponent", () => {
 
   describe("Basic markup test", () => {
     beforeEach(() => {
-      const columsBlock = new ColumnsComponent(undefined);
-      render(columsBlock.render());
+      render(new ColumnsComponent({}).render());
     });
 
     it("Have ColumnsBlock", () => {
@@ -26,8 +25,7 @@ describe("Testing ColumsComponent", () => {
   describe("Advanced markup test", () => {
     let number = 1;
     beforeEach(() => {
-      const columsBlock = new ColumnsComponent({ value: number });
-      render(columsBlock.render());
+      render(new ColumnsComponent({ value: number }).render());
       number += 1;
     });
 

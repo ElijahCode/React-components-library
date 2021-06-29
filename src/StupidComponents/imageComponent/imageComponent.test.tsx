@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import "react";
+import React from "react";
 import { ImageComponent } from "./imageComponent";
 
 describe("Testing imageComponent", () => {
@@ -10,8 +10,7 @@ describe("Testing imageComponent", () => {
 
   describe("Testing basic markup", () => {
     beforeEach(() => {
-      const img = new ImageComponent({});
-      render(img.render());
+      render(<ImageComponent {...{}} />);
     });
     it("Have img", () => {
       expect(screen.getByTestId("image")).toBeInTheDocument();
@@ -26,8 +25,7 @@ describe("Testing imageComponent", () => {
         source: "http://some_source/",
         align: floats[index] as "none" | "right" | "left",
       };
-      const img = new ImageComponent(imageComponentProps);
-      render(img.render());
+      render(<ImageComponent {...imageComponentProps} />);
       index += 1;
     });
 
