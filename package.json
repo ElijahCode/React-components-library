@@ -10,7 +10,8 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "-- -o ./dist",
     "deploy-storybook": "storybook-to-ghpages",
-    "deploy-storybook-ci": "storybook-to-ghpages -- --ci"
+    "deploy-storybook-ci": "storybook-to-ghpages -- --ci",
+    "loki-test": "npx loki test"
   },
   "author": "Ilya Starikov",
   "license": "ISC",
@@ -49,6 +50,7 @@
     "husky": "^6.0.0",
     "jest": "^26.6.3",
     "lint-staged": "^11.0.0",
+    "loki": "^0.28.1",
     "mini-css-extract-plugin": "^1.4.1",
     "prettier": "2.2.1",
     "react-test-renderer": "^17.0.2",
@@ -65,5 +67,20 @@
   "dependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
+  },
+  "loki": {
+    "configurations": {
+      "chrome.laptop": {
+        "target": "chrome.app",
+        "width": 1366,
+        "height": 768,
+        "deviceScaleFactor": 1,
+        "mobile": false
+      },
+      "chrome.iphone7": {
+        "target": "chrome.app",
+        "preset": "iPhone 7"
+      }
+    }
   }
 }
