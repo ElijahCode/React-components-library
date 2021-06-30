@@ -9,7 +9,8 @@
     "lint:fix": "prettier --write . && eslint . --ext .js,.ts,.tsx --fix",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "-- -o ./dist",
-    "deploy-storybook": "deploy-storybook -- --out=./dist"
+    "deploy-storybook": "storybook-to-ghpages",
+    "deploy-storybook-ci": "storybook-to-ghpages -- --ci"
   },
   "author": "Ilya Starikov",
   "license": "ISC",

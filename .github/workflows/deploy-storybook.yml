@@ -1,4 +1,4 @@
-name: Linter check
+name: Deploy_storybook
 
 on: pull_request
 
@@ -14,4 +14,4 @@ jobs:
           npm install
       - name: Deploy
         run: |
-          npm run deploy-storybook -- --ci
+          npm run deploy-storybook-ci
