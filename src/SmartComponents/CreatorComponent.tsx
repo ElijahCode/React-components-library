@@ -27,10 +27,12 @@ export class CreatorComponent extends React.Component<
         case "collapseList":
           components.push(
             <div key={key}>
-              {new CollapsingList({
-                headerText: firstArgument,
-                list: secondArgument.split(" "),
-              }).render()}
+              <CollapsingList
+                {...{
+                  headerText: firstArgument,
+                  list: secondArgument.split(" "),
+                }}
+              />
             </div>
           );
           key += 1;
@@ -38,24 +40,32 @@ export class CreatorComponent extends React.Component<
         case "columns":
           components.push(
             <div key={key}>
-              {new ColumnsComponent({
-                value: Number(firstArgument),
-              }).render()}
+              <ColumnsComponent
+                {...{
+                  value: Number(firstArgument),
+                }}
+              />
             </div>
           );
           key += 1;
           break;
         case "gapBlock":
-          components.push(<div key={key}>{new GapBlock({}).render()}</div>);
+          components.push(
+            <div key={key}>
+              <GapBlock {...{}} />
+            </div>
+          );
           key += 1;
           break;
         case "h":
           components.push(
             <div key={key}>
-              {new Header({
-                text: firstArgument,
-                level: Number(secondArgument),
-              }).render()}
+              <Header
+                {...{
+                  text: firstArgument,
+                  level: Number(secondArgument),
+                }}
+              />
             </div>
           );
           key += 1;
@@ -63,10 +73,12 @@ export class CreatorComponent extends React.Component<
         case "image":
           components.push(
             <div key={key}>
-              {new ImageComponent({
-                source: firstArgument,
-                align: secondArgument,
-              }).render()}
+              <ImageComponent
+                {...{
+                  source: firstArgument,
+                  align: secondArgument,
+                }}
+              />
             </div>
           );
           key += 1;
@@ -74,10 +86,12 @@ export class CreatorComponent extends React.Component<
         case "text":
           components.push(
             <div key={key}>
-              {new TextParagraph({
-                text: firstArgument,
-                style: secondArgument,
-              }).render()}
+              <TextParagraph
+                {...{
+                  text: firstArgument,
+                  style: secondArgument,
+                }}
+              />
             </div>
           );
           key += 1;
