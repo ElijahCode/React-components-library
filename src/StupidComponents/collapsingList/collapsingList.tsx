@@ -14,13 +14,13 @@ export class CollapsingList extends React.Component<
     buttonState: false,
   };
 
-  click = () => {
+  click = (): void => {
     this.setState({
       buttonState: this.state.buttonState !== true,
     });
   };
 
-  render() {
+  render(): JSX.Element {
     if (!this.state.buttonState) {
       return (
         <>

@@ -8,7 +8,7 @@ export class Header extends React.Component<
 
   text: string = this.props.text ? (this.props.text as string) : "Text";
 
-  render() {
+  render(): JSX.Element {
     switch (this.level) {
       case 1:
         return <h1 data-testid="h1">{this.text}</h1>;

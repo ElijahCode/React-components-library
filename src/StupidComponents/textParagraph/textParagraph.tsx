@@ -8,7 +8,7 @@ export class TextParagraph extends React.Component<
 
   style: string = this.props.style ? (this.props.style as string) : "normal";
 
-  render() {
+  render(): JSX.Element {
     switch (this.style) {
       case "bold":
         return <p style={{ fontWeight: "bold" }}>{this.text}</p>;

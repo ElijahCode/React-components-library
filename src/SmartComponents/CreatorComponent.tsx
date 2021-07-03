@@ -11,8 +11,8 @@ export class CreatorComponent extends React.Component<
   Record<string, unknown>
 > {
   // eslint-disable-next-line class-methods-use-this
-  render() {
-    const components: any[] = [];
+  render(): JSX.Element {
+    const components: JSX.Element[] = [];
     let answer;
     let key = 0;
     do {

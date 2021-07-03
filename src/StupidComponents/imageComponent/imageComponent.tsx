@@ -12,7 +12,7 @@ export class ImageComponent extends React.Component<
     ? (this.props.source as string)
     : "";
 
-  render() {
+  render(): JSX.Element {
     return (
       <img
         data-testid="image"

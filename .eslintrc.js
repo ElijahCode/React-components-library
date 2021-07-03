@@ -24,5 +24,7 @@ module.exports = {
     "no-restricted-globals": "off",
     "no-use-before-define": "off",
     "import/no-extraneous-dependencies": "off",
+    "no-alert": "off",
+    "class-methods-use-this": "off",
   },
 };

@@ -10,7 +10,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook -o ./dist",
     "deploy-storybook": "storybook-to-ghpages",
-    "deploy-storybook-ci": "storybook-to-ghpages -- --ci",
+    "deploy-storybook-ci": "storybook-to-ghpages --ci",
     "loki-test": "npx loki test"
   },
   "author": "Ilya Starikov",
