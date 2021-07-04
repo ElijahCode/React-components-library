@@ -8,6 +8,12 @@ describe("Testing Header component", () => {
     it("Test type", () => {
       expect(Header).toBeInstanceOf(Function);
     });
+    it("It have defalut props", () => {
+      expect(Header.defaultProps).toStrictEqual({
+        level: 1,
+        text: "Text",
+      });
+    });
   });
   describe("Test basic markup", () => {
     beforeEach(() => {

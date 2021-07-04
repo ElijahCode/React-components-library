@@ -4,6 +4,11 @@ export class TextParagraph extends React.Component<
   Record<string, unknown>,
   TextParagraphComponentProps
 > {
+  static defaultProps = {
+    text: "Text",
+    style: "normal",
+  };
+
   text: string = this.props.text ? (this.props.text as string) : "Text";
 
   style: string = this.props.style ? (this.props.style as string) : "normal";

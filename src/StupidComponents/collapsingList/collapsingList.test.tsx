@@ -6,7 +6,15 @@ import { CollapsingList } from "./collapsingList";
 
 describe("Testing CollapsingList", () => {
   describe("Testing type", () => {
-    expect(CollapsingList).toBeInstanceOf(Function);
+    it("It's type is function", () => {
+      expect(CollapsingList).toBeInstanceOf(Function);
+    });
+    it("It's have default props", () => {
+      expect(CollapsingList.defaultProps).toStrictEqual({
+        headText: "List",
+        list: [],
+      });
+    });
   });
   describe("Testing basic markup", () => {
     beforeEach(() => {

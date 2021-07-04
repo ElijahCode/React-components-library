@@ -14,6 +14,11 @@ export class CollapsingList extends React.Component<
     buttonState: false,
   };
 
+  static defaultProps = {
+    headText: "List",
+    list: [],
+  };
+
   click = (): void => {
     this.setState({
       buttonState: this.state.buttonState !== true,

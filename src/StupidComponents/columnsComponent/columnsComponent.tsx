@@ -4,6 +4,10 @@ export class ColumnsComponent extends React.Component<
   { value?: number } | undefined,
   { value: number }
 > {
+  static defaultProps = {
+    value: 2,
+  };
+
   state = {
     value: this.props.value ? this.props.value : 0,
   };

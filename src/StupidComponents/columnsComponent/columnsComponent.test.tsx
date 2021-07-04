@@ -5,7 +5,12 @@ import { ColumnsComponent } from "./columnsComponent";
 
 describe("Testing ColumsComponent", () => {
   describe("Type test", () => {
-    expect(ColumnsComponent).toBeInstanceOf(Function);
+    it("It's type is function", () => {
+      expect(ColumnsComponent).toBeInstanceOf(Function);
+    });
+    it("It's have default props", () => {
+      expect(ColumnsComponent.defaultProps).toStrictEqual({ value: 2 });
+    });
   });
 
   describe("Basic markup test", () => {

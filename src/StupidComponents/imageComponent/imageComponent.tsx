@@ -4,6 +4,11 @@ export class ImageComponent extends React.Component<
   Record<string, unknown>,
   ImageComponentProps
 > {
+  static defaultProps = {
+    textAlign: "none",
+    imageSource: "",
+  };
+
   textAlign: ImageComponentProps["align"] = this.props.align
     ? (this.props.align as ImageComponentProps["align"])
     : "none";

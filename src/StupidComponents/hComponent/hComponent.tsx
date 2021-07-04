@@ -4,6 +4,11 @@ export class Header extends React.Component<
   Record<string, unknown>,
   HComponentProps
 > {
+  static defaultProps = {
+    level: 1,
+    text: "Text",
+  };
+
   level: number = this.props.level ? (this.props.level as number) : 1;
 
   text: string = this.props.text ? (this.props.text as string) : "Text";
