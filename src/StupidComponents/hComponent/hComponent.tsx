@@ -5,6 +5,7 @@ export class Header extends React.Component<
   HComponentProps
 > {
   static defaultProps = {
+    name: "header",
     level: 1,
     text: "Text",
   };

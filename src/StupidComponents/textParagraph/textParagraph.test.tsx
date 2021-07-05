@@ -10,6 +10,7 @@ describe("Test TextParagraph component", () => {
     });
     it("It have a default props", () => {
       expect(TextParagraph.defaultProps).toStrictEqual({
+        name: "text paragraph",
         text: "Text",
         style: "normal",
       });

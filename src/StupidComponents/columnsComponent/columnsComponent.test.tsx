@@ -9,7 +9,10 @@ describe("Testing ColumsComponent", () => {
       expect(ColumnsComponent).toBeInstanceOf(Function);
     });
     it("It's have default props", () => {
-      expect(ColumnsComponent.defaultProps).toStrictEqual({ value: 2 });
+      expect(ColumnsComponent.defaultProps).toStrictEqual({
+        name: "columns component",
+        value: 2,
+      });
     });
   });
 

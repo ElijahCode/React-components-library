@@ -5,6 +5,7 @@ export class TextParagraph extends React.Component<
   TextParagraphComponentProps
 > {
   static defaultProps = {
+    name: "text paragraph",
     text: "Text",
     style: "normal",
   };

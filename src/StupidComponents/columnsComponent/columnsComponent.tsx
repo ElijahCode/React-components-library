@@ -5,6 +5,7 @@ export class ColumnsComponent extends React.Component<
   { value: number }
 > {
   static defaultProps = {
+    name: "columns component",
     value: 2,
   };
 

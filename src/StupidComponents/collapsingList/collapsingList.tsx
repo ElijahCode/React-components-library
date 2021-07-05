@@ -15,7 +15,8 @@ export class CollapsingList extends React.Component<
   };
 
   static defaultProps = {
-    headText: "List",
+    name: "collapsing list",
+    headerText: "List",
     list: [],
   };
 

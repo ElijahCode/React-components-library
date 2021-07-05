@@ -5,6 +5,7 @@ export class ImageComponent extends React.Component<
   ImageComponentProps
 > {
   static defaultProps = {
+    name: "image component",
     textAlign: "none",
     imageSource: "",
   };

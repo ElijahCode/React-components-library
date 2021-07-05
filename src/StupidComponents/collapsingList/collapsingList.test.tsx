@@ -11,7 +11,8 @@ describe("Testing CollapsingList", () => {
     });
     it("It's have default props", () => {
       expect(CollapsingList.defaultProps).toStrictEqual({
-        headText: "List",
+        name: "collapsing list",
+        headerText: "List",
         list: [],
       });
     });

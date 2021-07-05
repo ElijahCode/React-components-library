@@ -26,3 +26,14 @@ interface ImageComponentProps {
 interface ColumnsComponentProps {
   value: number;
 }
+
+interface ComponentWithDefaultProps extends React.Component {
+  defaultProps: Record<string, any>;
+}
+
+interface HOCTesterComponentState {
+  isComponentsNameKnown: boolean;
+  isComponentsPropsKnown: boolean;
+  componentName: string;
+  componentProps: Record<string, string | string[] | number>;
+}

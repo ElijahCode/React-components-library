@@ -10,6 +10,7 @@ describe("Testing Header component", () => {
     });
     it("It have defalut props", () => {
       expect(Header.defaultProps).toStrictEqual({
+        name: "header",
         level: 1,
         text: "Text",
       });
