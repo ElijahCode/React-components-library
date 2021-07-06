@@ -52,6 +52,74 @@ describe("HOCTesterComponent testing", () => {
       expect(screen.getByTestId("input_block2")).toBeInTheDocument();
       expect(screen.getByText("Confirm props")).toBeInTheDocument();
     });
+
+    it("Testing for collumns component", () => {
+      userEvent.selectOptions(screen.getByTestId("Selector"), [
+        "columns component",
+      ]);
+      userEvent.click(screen.getByText("Confirm name"));
+
+      expect(screen.getByTestId("HOCTesterBlock")).toBeInTheDocument();
+      expect(
+        screen.getByText("Please, choose element properties:")
+      ).toBeInTheDocument();
+      expect(screen.getByTestId("input_block1")).toBeInTheDocument();
+      expect(screen.getByText("Confirm props")).toBeInTheDocument();
+    });
+
+    it("Testing for gap block", () => {
+      userEvent.selectOptions(screen.getByTestId("Selector"), ["gap block"]);
+      userEvent.click(screen.getByText("Confirm name"));
+
+      expect(screen.getByTestId("HOCTesterBlock")).toBeInTheDocument();
+      expect(
+        screen.getByText("Please, choose element properties:")
+      ).toBeInTheDocument();
+      expect(screen.getByText("Confirm props")).toBeInTheDocument();
+    });
+
+    it("Testing for header component", () => {
+      userEvent.selectOptions(screen.getByTestId("Selector"), ["header"]);
+      userEvent.click(screen.getByText("Confirm name"));
+
+      expect(screen.getByTestId("HOCTesterBlock")).toBeInTheDocument();
+      expect(
+        screen.getByText("Please, choose element properties:")
+      ).toBeInTheDocument();
+      expect(screen.getByTestId("input_block1")).toBeInTheDocument();
+      expect(screen.getByTestId("input_block2")).toBeInTheDocument();
+      expect(screen.getByText("Confirm props")).toBeInTheDocument();
+    });
+
+    it("Testing for image component", () => {
+      userEvent.selectOptions(screen.getByTestId("Selector"), [
+        "image component",
+      ]);
+      userEvent.click(screen.getByText("Confirm name"));
+
+      expect(screen.getByTestId("HOCTesterBlock")).toBeInTheDocument();
+      expect(
+        screen.getByText("Please, choose element properties:")
+      ).toBeInTheDocument();
+      expect(screen.getByTestId("input_block1")).toBeInTheDocument();
+      expect(screen.getByTestId("input_block2")).toBeInTheDocument();
+      expect(screen.getByText("Confirm props")).toBeInTheDocument();
+    });
+
+    it("Testing for text paragraph component", () => {
+      userEvent.selectOptions(screen.getByTestId("Selector"), [
+        "text paragraph",
+      ]);
+      userEvent.click(screen.getByText("Confirm name"));
+
+      expect(screen.getByTestId("HOCTesterBlock")).toBeInTheDocument();
+      expect(
+        screen.getByText("Please, choose element properties:")
+      ).toBeInTheDocument();
+      expect(screen.getByTestId("input_block1")).toBeInTheDocument();
+      expect(screen.getByTestId("input_block2")).toBeInTheDocument();
+      expect(screen.getByText("Confirm props")).toBeInTheDocument();
+    });
   });
 
   describe("Testing 3rd stage markup", () => {
@@ -80,6 +148,76 @@ describe("HOCTesterComponent testing", () => {
       expect(screen.getByText("Collapse list")).toBeInTheDocument();
       expect(screen.getByTestId("ListOfItems")).toBeInTheDocument();
       expect(screen.getAllByTestId("Item").length).toBe(5);
+    });
+
+    it("Testing for columns component", () => {
+      userEvent.selectOptions(screen.getByTestId("Selector"), [
+        "columns component",
+      ]);
+      userEvent.click(screen.getByText("Confirm name"));
+
+      userEvent.type(screen.getByTestId("input1"), "3");
+
+      userEvent.click(screen.getByText("Confirm props"));
+
+      expect(screen.getByTestId("columnsBlock")).toBeInTheDocument();
+      expect(screen.getAllByTestId("column").length).toBe(3);
+    });
+
+    it("Testing for gap block component", () => {
+      userEvent.selectOptions(screen.getByTestId("Selector"), ["gap block"]);
+      userEvent.click(screen.getByText("Confirm name"));
+
+      userEvent.click(screen.getByText("Confirm props"));
+
+      expect(screen.getByTestId("gapDiv")).toBeInTheDocument();
+      expect(screen.getByTestId("gapHorizontalLine")).toBeInTheDocument();
+    });
+
+    it("Testing for header component", () => {
+      userEvent.selectOptions(screen.getByTestId("Selector"), ["header"]);
+      userEvent.click(screen.getByText("Confirm name"));
+
+      userEvent.type(screen.getByTestId("input1"), "1");
+      userEvent.type(screen.getByTestId("input2"), "Test header");
+      userEvent.click(screen.getByText("Confirm props"));
+
+      expect(screen.getByTestId("h1")).toBeInTheDocument();
+      expect(screen.getByTestId("h1").matches("h1")).toBeTruthy();
+      expect(screen.getByText("Test header")).toBeInTheDocument();
+    });
+
+    it.skip("Testing for image component", () => {
+      userEvent.selectOptions(screen.getByTestId("Selector"), [
+        "image component",
+      ]);
+      userEvent.click(screen.getByText("Confirm name"));
+
+      userEvent.type(screen.getByTestId("input1"), "left");
+      userEvent.type(screen.getByTestId("input2"), "http://some_source/");
+      userEvent.click(screen.getByText("Confirm props"));
+
+      expect(screen.getByTestId("image")).toBeInTheDocument();
+      expect((screen.getByTestId("image") as HTMLImageElement).src).toBe(
+        "http://some_source/"
+      );
+      expect(screen.getByTestId("image").style.float).toBe("left");
+    });
+
+    it("Testing for text paragraph component", () => {
+      userEvent.selectOptions(screen.getByTestId("Selector"), [
+        "text paragraph",
+      ]);
+      userEvent.click(screen.getByText("Confirm name"));
+
+      userEvent.type(screen.getByTestId("input1"), "Test text");
+      userEvent.type(screen.getByTestId("input2"), "bold");
+      userEvent.click(screen.getByText("Confirm props"));
+
+      expect(screen.getByText("Test text")).toBeInTheDocument();
+      expect(document.getElementsByTagName("p")[0].style.fontWeight).toBe(
+        "bold"
+      );
     });
   });
 });
