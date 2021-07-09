@@ -11,8 +11,8 @@ describe("Testing imageComponent", () => {
     it("It's have default props", () => {
       expect(ImageComponent.defaultProps).toStrictEqual({
         name: "image component",
-        textAlign: "none",
-        imageSource: "",
+        align: "none",
+        source: "",
       });
     });
   });

@@ -1,11 +1,19 @@
-export function HOC(Element: any, newProps: any) {
-  const ElementWithNewProps = Element;
-  Object.keys(ElementWithNewProps.defaultProps).forEach((key) => {
-    if (key === "name") {
-      return;
+import React from "react";
+
+interface HOCOutPutValue extends React.ComponentClass {
+  getProps(): React.ComponentClass["defaultProps"];
+}
+
+export function HOC<K extends React.ComponentClass["defaultProps"]>(
+  Element: React.ComponentClass,
+  newProps: K
+): HOCOutPutValue {
+  class NewElement extends Element {
+    static defaultProps = newProps;
+
+    static getProps() {
+      return newProps;
     }
-    ElementWithNewProps.defaultProps[key] = newProps[key];
-  });
-  ElementWithNewProps.getProps = (): any => newProps;
-  return ElementWithNewProps;
+  }
+  return NewElement;
 }

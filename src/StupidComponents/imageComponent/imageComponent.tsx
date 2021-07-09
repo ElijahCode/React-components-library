@@ -1,13 +1,13 @@
 import * as React from "react";
 
 export class ImageComponent extends React.Component<
-  Record<string, unknown>,
-  ImageComponentProps
+  ImageComponentProps,
+  Record<string, unknown>
 > {
   static defaultProps = {
     name: "image component",
-    textAlign: "none",
-    imageSource: "",
+    align: "none",
+    source: "",
   };
 
   textAlign: ImageComponentProps["align"] = this.props.align

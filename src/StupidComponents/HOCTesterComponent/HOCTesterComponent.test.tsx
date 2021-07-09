@@ -187,7 +187,7 @@ describe("HOCTesterComponent testing", () => {
       expect(screen.getByText("Test header")).toBeInTheDocument();
     });
 
-    it.skip("Testing for image component", () => {
+    it("Testing for image component", () => {
       userEvent.selectOptions(screen.getByTestId("Selector"), [
         "image component",
       ]);
