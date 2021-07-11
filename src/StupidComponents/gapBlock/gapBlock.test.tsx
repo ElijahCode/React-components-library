@@ -5,7 +5,14 @@ import { GapBlock } from "./gapBLock";
 
 describe("Testing GapBlock component", () => {
   describe("Test type", () => {
-    expect(GapBlock).toBeInstanceOf(Function);
+    it("It's type is function", () => {
+      expect(GapBlock).toBeInstanceOf(Function);
+    });
+    it("It have default props", () => {
+      expect(GapBlock.defaultProps).toStrictEqual({
+        name: "gap block",
+      });
+    });
   });
   describe("Testing markup", () => {
     beforeEach(() => {

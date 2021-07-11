@@ -5,7 +5,16 @@ import { TextParagraph } from "./textParagraph";
 
 describe("Test TextParagraph component", () => {
   describe("Test type", () => {
-    expect(TextParagraph).toBeInstanceOf(Function);
+    it("It's type is function", () => {
+      expect(TextParagraph).toBeInstanceOf(Function);
+    });
+    it("It have a default props", () => {
+      expect(TextParagraph.defaultProps).toStrictEqual({
+        name: "text paragraph",
+        text: "Text",
+        style: "normal",
+      });
+    });
   });
   describe("Testing basic markup", () => {
     beforeEach(() => {

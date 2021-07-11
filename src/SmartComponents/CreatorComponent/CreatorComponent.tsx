@@ -1,10 +1,10 @@
 import * as React from "react";
-import { CollapsingList } from "../StupidComponents/collapsingList/collapsingList";
-import { ColumnsComponent } from "../StupidComponents/columnsComponent/columnsComponent";
-import { GapBlock } from "../StupidComponents/gapBlock/gapBLock";
-import { Header } from "../StupidComponents/hComponent/hComponent";
-import { ImageComponent } from "../StupidComponents/imageComponent/imageComponent";
-import { TextParagraph } from "../StupidComponents/textParagraph/textParagraph";
+import { CollapsingList } from "../../StupidComponents/collapsingList/collapsingList";
+import { ColumnsComponent } from "../../StupidComponents/columnsComponent/columnsComponent";
+import { GapBlock } from "../../StupidComponents/gapBlock/gapBLock";
+import { Header } from "../../StupidComponents/hComponent/hComponent";
+import { ImageComponent } from "../../StupidComponents/imageComponent/imageComponent";
+import { TextParagraph } from "../../StupidComponents/textParagraph/textParagraph";
 
 export class CreatorComponent extends React.Component<
   Record<string, unknown>,

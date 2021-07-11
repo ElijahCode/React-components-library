@@ -5,9 +5,17 @@ import { ImageComponent } from "./imageComponent";
 
 describe("Testing imageComponent", () => {
   describe("Test type", () => {
-    expect(ImageComponent).toBeInstanceOf(Function);
+    it("It's type is function", () => {
+      expect(ImageComponent).toBeInstanceOf(Function);
+    });
+    it("It's have default props", () => {
+      expect(ImageComponent.defaultProps).toStrictEqual({
+        name: "image component",
+        align: "none",
+        source: "",
+      });
+    });
   });
-
   describe("Testing basic markup", () => {
     beforeEach(() => {
       render(<ImageComponent {...{}} />);
