@@ -118,7 +118,7 @@ export class HOCTesterComponent extends React.Component<
             id="selectComponent"
             onChange={this.selectHandler}
           >
-            <option disabled>Choose component</option>
+            <option>Choose component</option>
             <option value="collapsing list">Collapsing list</option>
             <option value="columns component">Columns component</option>
             <option value="gap block">Gap block</option>
